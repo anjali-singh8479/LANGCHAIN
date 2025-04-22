@@ -1,11 +1,13 @@
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
-# these are the ai models are we are importing class from these
+# these are the ai models and we are importing class from these
 
 from langchain_core.messages import SystemMessage, HumanMessage,AIMessage
 from dotenv import load_dotenv
+
 load_dotenv()
+
 #creating openchat ai model
 openai_model=ChatOpenAI(model="gpt-4o-mini")
 
@@ -20,8 +22,10 @@ message=[
     SystemMessage(content="Roadmap for langchain"),
     HumanMessage(content="I am a developer and want to learn langchain , provide me a roadmap for this"),
 ]
-# response=openai_model.invoke(message)
+
+response=openai_model.invoke(message)
 # response=anthropic_model.invoke(message)
 # response=google_model.invoke(message)
 
-# print(response.content)
+print(response.content)
+

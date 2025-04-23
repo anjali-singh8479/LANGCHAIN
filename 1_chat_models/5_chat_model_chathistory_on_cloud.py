@@ -13,9 +13,8 @@ from datetime import datetime
 load_dotenv()
 
 
-
 ProjectID="langchain-aa644"
-Session_ID="User_chat_session_"+ strhi(datetime.now()) # this can be a user name or any thing unique
+Session_ID="User_chat_session_"+ str(datetime.now()) # this can be a user name or any thing unique
 Collection_name="Langchain_user_chats"
 client=firestore.Client(project=ProjectID)
 
@@ -24,7 +23,6 @@ chathistory=FirestoreChatMessageHistory(
    collection=Collection_name,
    client=client,
 )
-collection_ref=client.collection(Collection_name)
 print("Chat History messages")
 print(chathistory.messages)
 openai_model=ChatOpenAI(model="gpt-4o-mini")

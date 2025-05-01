@@ -4,6 +4,7 @@ import { HumanMessage } from "@langchain/core/messages";
 import dotenv from "dotenv";
 import readlineSync from "readline-sync";
 
+
 dotenv.config();
 
 const chat_openai = new ChatOpenAI({

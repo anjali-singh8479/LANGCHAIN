@@ -15,6 +15,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 # from dotenv import load_dotenv
 # load_dotenv()
+
 # getting the absolute path of current dir which is rags folder
 
 current_dir=os.path.dirname(os.path.abspath(__file__))
